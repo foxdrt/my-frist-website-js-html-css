@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>my first js-html-css project</title>
+    <style>
+        body{
+            background-color: rgb(25, 25, 25);
+        }
+        .text{
+            font-family:'Courier New', Courier, monospace;
+            color:wheat;
+            font-weight: 100;
+            transition: font-style 0.3s ease;
+        }
+        .text:hover{
+            font-style: italic;
+        }
+        .s{
+            width: 450px;
+            height: 450px;
+            display: inline-block;
+            background-color: rgb(61, 61, 61);
+            position: absolute;
+            top: 40%;
+            left: 40%;
+            border-radius: 2px;
+        }
+        .timer-idk{
+            background-color: rgb(125, 125, 255);
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: none;
+            transition: box-shadow 0.2s ease-in-out,scale ease-in-out 0.3s;
+        }
+        .timer-idk:hover{
+            scale: 101%;
+
+        }
+        .timer-idk:active{
+            box-shadow: 0px 0px 15px 5px rgba(144, 144, 255, 0.837);
+
+        }
+        #num{
+            font-size: 50px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #reset{
+            width: 50px;
+            height: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            text-align: center;
+            background-color: rgb(125, 125, 255);
+            color: white;
+            border-radius: 4px;
+            border: none;
+            margin-top: 382px;
+            margin-left: 20px;
+            transition: box-shadow 0.2s ease-in-out;
+        }
+        #reset:hover{
+            box-shadow: 0px 0px 8px 5px rgba(144, 144, 255, 0.837);
+
+        }
+    
+    </style>
+</head>
+<body>
+    <h2 class="text">hello turki in the near or far future this is your first js-html-css website :D</h2>
+    <h3 class="text">thanks for mharb for the idea </h3>
+    <div class="s">
+       <button class="timer-idk" id="timer">
+        <span id="num">0</span>
+       </button>  <!--  dont ask me why i call it timer  -->
+       <button id="reset" onclick="document.getElementById('num').textContent=0;num$just=0">Reset</button>
+    </div>
+    <script>
+        let num$just = 0;
+        document.getElementById("timer").onclick = function(){
+            num$just += 1; 
+            document.getElementById("num").textContent = num$just;
+        }
+    </script>
+</body>
+</html>
